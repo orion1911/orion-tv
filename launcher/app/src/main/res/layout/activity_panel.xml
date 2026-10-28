@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- The settings panel (QuickSettingsActivity), shaped like Google TV's own: a compact drawer at the top right with the date
+     and time, a grid of quick tiles, the notifications as cards, and Clear all. Opened by the remote's Settings
+     button (settings_key_panel) and Home's bell (notifications_button). -->
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/scrim"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:id="@+id/drawer"
+        android:layout_width="256dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end|top"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/panel_drawer"
+        android:elevation="16dp"
+        android:scrollbars="none"
+        android:overScrollMode="never"
+        android:fillViewport="false">
+
+        <LinearLayout
+            android:id="@+id/content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingStart="12dp"
+            android:paddingEnd="12dp"
+            android:paddingTop="14dp"
+            android:paddingBottom="4dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:paddingStart="4dp"
+                android:layout_marginBottom="12dp">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextClock
+                        android:id="@+id/panelDate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#B3FFFFFF"
+                        android:textSize="12sp"
+                        android:fontFamily="@string/font_regular" />
+
+                    <TextClock
+                        android:id="@+id/panelTime"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:format12Hour="h:mm a"
+                        android:format24Hour="HH:mm"
+                        android:textColor="#FFFFFFFF"
+                        android:textSize="22sp"
+                        android:fontFamily="@string/font_regular"
+                        android:includeFontPadding="false" />
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/panelGear"
+                    android:layout_width="34dp"
+                    android:layout_height="34dp"
+                    android:padding="8dp"
+                    android:src="@drawable/ic_settings"
+                    android:focusable="true"
+                    android:clickable="true"
+                    android:contentDescription="@string/tv_settings" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/tiles"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" />
+
+            <LinearLayout
+                android:id="@+id/cards"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dp"
+                android:orientation="vertical" />
+        </LinearLayout>
+    </ScrollView>
+</FrameLayout>

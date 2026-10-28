@@ -1,0 +1,28 @@
+tools/venv
+tools/adbkey/
+__pycache__/
+launcher/.gradle/
+launcher/build/
+launcher/app/build/
+launcher/local.properties
+# your own TV's dumps (serial, android_id, device names) stay local
+backup/
+# session screenshots and working notes (may show the Wi-Fi name or account avatar) stay local
+shots/
+work/
+# Perfetto traces from tools/trace.py: large, and they hold the TV's process list
+traces/
+# icons cut from a fan-made icon pack with no licence, rebuilt locally for this TV (tools/make_icons.ps1)
+themes/aerial-glass/icons/
+# the pack APK, Bebas Neue and the cut-outs tools/make_icons.ps1 keeps between runs
+tools/iconpack/
+.DS_Store
+
+# Generated install bundles and JVM crash reports stay out of contributions.
+*.apk
+*.aab
+launcher/hs_err_pid*.log
+launcher/replay_pid*.log
+/inspiration
+/.agents
+skills-lock.json

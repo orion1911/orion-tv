@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- The settings panel's drawer: dark slate, nearly opaque, large rounded corners, as Google TV's own. -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android" android:shape="rectangle">
+    <solid android:color="#F5232831" />
+    <corners android:radius="24dp" />
+</shape>
