@@ -54,6 +54,10 @@ still has no network permission, no analytics and no background services.
 - **Glass toasts**, a soft cross-fade on every focus move (`soft_motion`), and the remote's own app buttons
   (`app_keys`): Netflix and Crunchyroll open Stremio, Prime Video opens Kodi, YouTube opens SmartTube, YouTube Music
   opens TV Bro.
+- **Remote keys** ([`addons/key-mapper`](addons/key-mapper)): map any remote button to an app from the TV itself,
+  press the button, pick the app, change or remove it later. Its own accessibility key filter learns the press before
+  the firmware's own dispatch, so Sony's Netflix and YouTube buttons can be taken over, and Back, OK and the arrows
+  stay navigation. Independent of `app_keys`, so it still works when the launcher's key helpers are off.
 
 ### How to use it
 
