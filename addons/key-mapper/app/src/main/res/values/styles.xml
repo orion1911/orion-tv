@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Row">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">52dp</item>
+        <item name="android:layout_marginTop">8dp</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:paddingStart">18dp</item>
+        <item name="android:paddingEnd">18dp</item>
+        <item name="android:background">@drawable/row_bg</item>
+        <item name="android:textColor">#FFFFFFFF</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:focusable">true</item>
+        <item name="android:clickable">true</item>
+    </style>
+</resources>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Remote keys</string>
+    <string name="title">Remote keys</string>
+    <string name="helper_on">Key helper: on</string>
+    <string name="helper_off">Key helper: off. Press OK to turn it on.</string>
+    <string name="explain">Each row is a remote button and what it opens. Press OK on a row to change the app or remove it.</string>
+    <string name="no_keys">No buttons mapped yet.</string>
+    <string name="add_key">Add a remote button</string>
+    <string name="press_button">Press the remote button you want to map. Back cancels.</string>
+    <string name="choose_app">Open which app?</string>
+    <string name="change_app">Open another app</string>
+    <string name="remove">Do nothing</string>
+    <string name="scan_label">Scan %1$d</string>
+    <string name="look_out">A button another app handles is never seen here. If the launcher maps the same button, turn its mapping off first.</string>
+    <string name="open_accessibility_hint">Turn Remote keys on in Settings, Accessibility.</string>
+    <string name="service_description">Maps extra remote buttons to apps. Off unless you turn it on.</string>
+</resources>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <uses-feature android:name="android.software.leanback" android:required="true" />
+    <uses-feature android:name="android.hardware.touchscreen" android:required="false" />
+
+    <!-- Listing the apps a button can open, on Android 11 and later. -->
+    <queries>
+        <intent>
+            <action android:name="android.intent.action.MAIN" />
+            <category android:name="android.intent.category.LEANBACK_LAUNCHER" />
+        </intent>
+        <intent>
+            <action android:name="android.intent.action.MAIN" />
+            <category android:name="android.intent.category.LAUNCHER" />
+        </intent>
+    </queries>
+
+    <application
+        android:allowBackup="false"
+        android:banner="@drawable/icon"
+        android:icon="@drawable/icon"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@android:style/Theme.Material.NoActionBar.Fullscreen">
+
+        <activity
+            android:name=".MainActivity"
+            android:exported="true"
+            android:launchMode="singleTask">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LEANBACK_LAUNCHER" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="com.gathin.tvhome.category.DOCK_CARD" />
+            </intent-filter>
+            <meta-data android:name="com.gathin.tvhome.card" android:resource="@xml/module_card" />
+        </activity>
+
+        <!-- The key filter. Android binds it only after the owner turns it on in Settings, Accessibility;
+             install.sh does that over adb. -->
+        <service
+            android:name=".KeyService"
+            android:exported="true"
+            android:label="@string/app_name"
+            android:permission="android.permission.BIND_ACCESSIBILITY_SERVICE">
+            <intent-filter>
+                <action android:name="android.accessibilityservice.AccessibilityService" />
+            </intent-filter>
+            <meta-data
+                android:name="android.accessibilityservice"
+                android:resource="@xml/accessibility_service" />
+        </service>
+    </application>
+</manifest>
