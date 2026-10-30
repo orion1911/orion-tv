@@ -4,7 +4,7 @@
 
 ## Orion TV: an Apple TV-inspired theme
 
-<p align="center"><img src="docs/orion/showcase_gif.gif" alt="Orion on a Sony BRAVIA: a thin clock and the date over Mount Shasta at dusk, a row of ten frosted app tiles below with white wordmark logos, and four glass buttons in the top right corner."></p>
+<p align="center"><img src="docs/orion/showcase_gif.GIF" alt="Orion on a Sony BRAVIA: a thin clock and the date over Mount Shasta at dusk, a row of ten frosted app tiles below with white wordmark logos, and four glass buttons in the top right corner."></p>
 
 One TV's home screen, rebuilt over a few evenings on top of CleanYourTV's launcher: ten near-square frosted tiles
 over a blue-hour picture, each tile the picture behind it softened, with the app's own colour rising from its bottom
