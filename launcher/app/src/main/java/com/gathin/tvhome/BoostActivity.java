@@ -218,8 +218,12 @@ public final class BoostActivity extends Activity {
      */
     private Set<String> usedSinceBoot() {
         android.app.AppOpsManager ops = getSystemService(android.app.AppOpsManager.class);
-        int mode = ops.unsafeCheckOpNoThrow(android.app.AppOpsManager.OPSTR_GET_USAGE_STATS,
-                android.os.Process.myUid(), getPackageName());
+        // unsafeCheckOpNoThrow is API 29; the older checkOpNoThrow still answers on 26 to 28.
+        int mode = android.os.Build.VERSION.SDK_INT >= 29
+                ? ops.unsafeCheckOpNoThrow(android.app.AppOpsManager.OPSTR_GET_USAGE_STATS,
+                        android.os.Process.myUid(), getPackageName())
+                : ops.checkOpNoThrow(android.app.AppOpsManager.OPSTR_GET_USAGE_STATS,
+                        android.os.Process.myUid(), getPackageName());
         if (mode != android.app.AppOpsManager.MODE_ALLOWED) return null;
         android.app.usage.UsageStatsManager usm = getSystemService(android.app.usage.UsageStatsManager.class);
         long now = System.currentTimeMillis();

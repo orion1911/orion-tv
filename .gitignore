@@ -26,3 +26,4 @@ launcher/replay_pid*.log
 /inspiration
 /.agents
 skills-lock.json
+/git-logs
